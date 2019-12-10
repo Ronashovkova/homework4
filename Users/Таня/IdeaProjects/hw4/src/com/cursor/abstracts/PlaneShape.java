@@ -6,15 +6,15 @@ import com.cursor.Vertex;
 
 public abstract class PlaneShape extends Shape implements PerimeterMeasurable, AreaMeasurable {
 
-    public PlaneShape(Vertex a) {
-        super(a);
+    public PlaneShape(Vertex vertexA) {
+        super(vertexA);
     }
 
-    public Vertex getA() {
-        return super.getA();
+    public Vertex getVertexA() {
+        return super.getVertexA();
     }
 
-    public void setA(Vertex a) {
-        super.setA(a);
+    public void setVertexA(Vertex vertexA) {
+        super.setVertexA(vertexA);
     }
 }

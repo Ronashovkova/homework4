@@ -8,17 +8,13 @@ import java.lang.Math;
 public class Circle extends PlaneShape {
     private double radius;
 
-    public Circle(Vertex a, double radius) {
-        super(a);
+    public Circle(Vertex vertexA, double radius) {
+        super(vertexA);
         this.radius = radius;
     }
 
     public double getRadius() {
         return radius;
-    }
-
-    public void setRadius(double radius) {
-        this.radius = radius;
     }
 
     @Override
@@ -33,7 +29,7 @@ public class Circle extends PlaneShape {
 
     @Override
     public String toString() {
-        return "Circle: " + "vertex " + getA().toString() + ", radius = " + getRadius() +
+        return "Circle: " + "vertex " + this.getVertexA().toString() + ", radius = " + getRadius() +
                 ", perimeter = " + getPerimeter() + ", area = " + getArea();
     }
 }

@@ -3,17 +3,17 @@ package com.cursor.abstracts;
 import com.cursor.Vertex;
 
 public abstract class Shape {
-    private Vertex a;
+    private Vertex vertexA;
 
     public Shape(Vertex vertex) {
-        this.a = vertex;
+        this.vertexA = vertex;
     }
 
-    public Vertex getA() {
-        return a;
+    public Vertex getVertexA() {
+        return vertexA;
     }
 
-    public void setA(Vertex a) {
-        this.a = a;
+    public void setVertexA(Vertex vertexA) {
+        this.vertexA = vertexA;
     }
 }

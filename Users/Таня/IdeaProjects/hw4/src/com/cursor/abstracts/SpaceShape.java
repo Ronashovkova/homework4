@@ -10,11 +10,11 @@ public abstract class SpaceShape extends Shape implements AreaMeasurable, Volume
         super(vertex);
     }
 
-    public Vertex getA() {
-        return super.getA();
+    public Vertex getVertexA() {
+        return super.getVertexA();
     }
 
-    public void setA(Vertex a) {
-        super.setA(a);
+    public void setVertexA(Vertex vertexA) {
+        super.setVertexA(vertexA);
     }
 }

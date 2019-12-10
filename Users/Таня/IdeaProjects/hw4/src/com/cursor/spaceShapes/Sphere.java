@@ -16,11 +16,6 @@ public class Sphere extends SpaceShape {
         return radius;
     }
 
-    public void setRadius(double radius) {
-        this.radius = radius;
-    }
-
-
     @Override
     public double getArea() {
         return Math.round(4 * Math.PI * Math.pow(getRadius(), 2) * 100.0) / 100.0;
@@ -33,7 +28,7 @@ public class Sphere extends SpaceShape {
 
     @Override
     public String toString() {
-        return "Sphere: " + "vertex " + getA() + ", radius = " + getRadius() +
+        return "Sphere: " + "vertex " + getVertexA() + ", radius = " + getRadius() +
                 ", volume = " + getVolume() + ", area = " + getArea();
     }
 }

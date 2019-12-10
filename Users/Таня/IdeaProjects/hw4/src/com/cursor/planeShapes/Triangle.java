@@ -6,36 +6,29 @@ import com.cursor.abstracts.PlaneShape;
 import java.lang.Math;
 
 public class Triangle extends PlaneShape {
-    private Vertex b;
-    private Vertex c;
+    private Vertex vertexB;
+    private Vertex vertexC;
 
-    public Triangle(Vertex a, Vertex b, Vertex c) {
-        super(a);
-        this.b = b;
-        this.c = c;
+    public Triangle(Vertex vertexA, Vertex vertexB, Vertex vertexC) {
+        super(vertexA);
+        this.vertexB = vertexB;
+        this.vertexC = vertexC;
     }
 
-    public Vertex getB() {
-        return b;
+    public Vertex getVertexB() {
+        return vertexB;
     }
 
-    public void setB(Vertex b) {
-        this.b = b;
-    }
-
-    public Vertex getC() {
-        return c;
-    }
-
-    public void setC(Vertex c) {
-        this.c = c;
+    public Vertex getVertexC() {
+        return vertexC;
     }
 
 
     @Override
     public double getArea() {
-        double area = (getA().getX() * (b.getY() - c.getY()) + b.getX() * (c.getY() - getA().getY()) +
-                c.getX() * (getA().getY() - b.getY())) / 2.0f;
+        double area = (this.getVertexA().getX() * (getVertexB().getY() - getVertexC().getY()) +
+                getVertexB().getX() * (getVertexC().getY() - this.getVertexA().getY()) +
+                getVertexC().getX() * (this.getVertexA().getY() - getVertexB().getY())) / 2.0f;
         return Math.abs(area);
     }
 
@@ -45,16 +38,16 @@ public class Triangle extends PlaneShape {
 
     @Override
     public double getPerimeter() {
-        double sideA = findSide(getA(), getB());
-        double sideB = findSide(getB(), getC());
-        double sideC = findSide(getC(), getA());
+        double sideA = findSide(this.getVertexA(), getVertexB());
+        double sideB = findSide(getVertexB(), getVertexC());
+        double sideC = findSide(getVertexC(), this.getVertexA());
         return Math.round((sideA + sideB + sideC) * 100.0) / 100.0;
     }
 
     @Override
     public String toString() {
-        return "Triangle: " + "vertex A " + getA() + ", vertex B " + getB() +
-                ", vertex C " + getC() + ", perimeter = " + getPerimeter() +
+        return "Triangle: " + "vertex A " + this.getVertexA() + ", vertex B " + getVertexB() +
+                ", vertex C " + getVertexC() + ", perimeter = " + getPerimeter() +
                 ", area = " + getArea();
     }
 }

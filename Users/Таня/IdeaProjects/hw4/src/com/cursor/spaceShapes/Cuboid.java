@@ -19,24 +19,12 @@ public class Cuboid extends SpaceShape {
         return width;
     }
 
-    public void setWidth(double width) {
-        this.width = width;
-    }
-
     public double getHeight() {
         return height;
     }
 
-    public void setHeight(double height) {
-        this.height = height;
-    }
-
     public double getDepth() {
         return depth;
-    }
-
-    public void setDepth(double depth) {
-        this.depth = depth;
     }
 
     @Override
@@ -52,7 +40,7 @@ public class Cuboid extends SpaceShape {
 
     @Override
     public String toString() {
-        return "Cuboid: " + "vertex " + getA() + ", width = " + getWidth() + ", height = " + getHeight() +
+        return "Cuboid: " + "vertex " + getVertexA() + ", width = " + getWidth() + ", height = " + getHeight() +
                 ", depth = " + getDepth() + ", volume = " + getVolume() + ", area = " + getArea();
     }
 }

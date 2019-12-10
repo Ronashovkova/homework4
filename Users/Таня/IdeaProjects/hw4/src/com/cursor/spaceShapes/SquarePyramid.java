@@ -1,5 +1,4 @@
 package com.cursor.spaceShapes;
-
 import com.cursor.Vertex;
 import com.cursor.abstracts.SpaceShape;
 
@@ -18,18 +17,9 @@ public class SquarePyramid extends SpaceShape {
         return baseWidth;
     }
 
-    public void setBaseWidth(double baseWidth) {
-        this.baseWidth = baseWidth;
-    }
-
     public double getBaseHeight() {
         return baseHeight;
     }
-
-    public void setBaseHeight(double baseHeight) {
-        this.baseHeight = baseHeight;
-    }
-
 
     @Override
     public double getArea() {
@@ -44,7 +34,7 @@ public class SquarePyramid extends SpaceShape {
 
     @Override
     public String toString() {
-        return "SquarePyramid: " + "vertex " + getA() + ", base width = " + getBaseWidth() +
+        return "SquarePyramid: " + "vertex " + getVertexA() + ", base width = " + getBaseWidth() +
                 ", height = " + getBaseHeight() + ", volume = " + getVolume() + ", area = " + getArea();
     }
 }
