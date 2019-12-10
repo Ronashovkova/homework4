@@ -1,23 +1,17 @@
-package com.cursor;
+package com.cursor.planeShapes;
+
+import com.cursor.Vertex;
+import com.cursor.abstracts.PlaneShape;
 
 public class Rectangle extends PlaneShape {
 
-    private Vertex a;
     private double width;
     private double height;
 
     public Rectangle(Vertex a, double width, double height) {
-        this.a = a;
+        super(a);
         this.height = height;
         this.width = width;
-    }
-
-    public Vertex getA() {
-        return a;
-    }
-
-    public void setA(Vertex a) {
-        this.a = a;
     }
 
     public double getWidth() {

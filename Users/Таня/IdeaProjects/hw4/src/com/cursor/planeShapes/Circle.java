@@ -1,22 +1,16 @@
-package com.cursor;
+package com.cursor.planeShapes;
+
+import com.cursor.Vertex;
+import com.cursor.abstracts.PlaneShape;
 
 import java.lang.Math;
 
 public class Circle extends PlaneShape {
-    private Vertex a;
     private double radius;
 
     public Circle(Vertex a, double radius) {
-        this.a = a;
+        super(a);
         this.radius = radius;
-    }
-
-    public Vertex getA() {
-        return a;
-    }
-
-    public void setA(Vertex a) {
-        this.a = a;
     }
 
     public double getRadius() {
@@ -39,7 +33,7 @@ public class Circle extends PlaneShape {
 
     @Override
     public String toString() {
-        return "Circle: " + "vertex " + a.toString() + ", radius = " + getRadius() +
+        return "Circle: " + "vertex " + getA().toString() + ", radius = " + getRadius() +
                 ", perimeter = " + getPerimeter() + ", area = " + getArea();
     }
 }

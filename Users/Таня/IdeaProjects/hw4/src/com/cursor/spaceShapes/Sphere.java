@@ -1,21 +1,15 @@
-package com.cursor;
+package com.cursor.spaceShapes;
+
+import com.cursor.Vertex;
+import com.cursor.abstracts.SpaceShape;
 
 public class Sphere extends SpaceShape {
 
-    private Vertex a;
     private double radius;
 
-    public Sphere(Vertex a, double radius) {
-        this.a = a;
+    public Sphere(Vertex vertex, double radius) {
+        super(vertex);
         this.radius = radius;
-    }
-
-    public Vertex getA() {
-        return a;
-    }
-
-    public void setA(Vertex a) {
-        this.a = a;
     }
 
     public double getRadius() {

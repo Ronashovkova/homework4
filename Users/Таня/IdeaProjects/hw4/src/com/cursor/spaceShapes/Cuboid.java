@@ -1,24 +1,18 @@
-package com.cursor;
+package com.cursor.spaceShapes;
+
+import com.cursor.Vertex;
+import com.cursor.abstracts.SpaceShape;
 
 public class Cuboid extends SpaceShape {
-    private Vertex a;
     private double width;
     private double height;
     private double depth;
 
-    public Cuboid(Vertex a, double width, double height, double depth) {
-        this.a = a;
+    public Cuboid(Vertex vertex, double width, double height, double depth) {
+        super(vertex);
         this.width = width;
         this.height = height;
         this.depth = depth;
-    }
-
-    public Vertex getA() {
-        return a;
-    }
-
-    public void setA(Vertex a) {
-        this.a = a;
     }
 
     public double getWidth() {

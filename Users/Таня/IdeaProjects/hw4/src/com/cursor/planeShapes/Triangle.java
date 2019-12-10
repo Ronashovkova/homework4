@@ -1,24 +1,18 @@
-package com.cursor;
+package com.cursor.planeShapes;
+
+import com.cursor.Vertex;
+import com.cursor.abstracts.PlaneShape;
 
 import java.lang.Math;
 
 public class Triangle extends PlaneShape {
-    private Vertex a;
     private Vertex b;
     private Vertex c;
 
     public Triangle(Vertex a, Vertex b, Vertex c) {
-        this.a = a;
+        super(a);
         this.b = b;
         this.c = c;
-    }
-
-    public Vertex getA() {
-        return a;
-    }
-
-    public void setA(Vertex a) {
-        this.a = a;
     }
 
     public Vertex getB() {
@@ -40,8 +34,8 @@ public class Triangle extends PlaneShape {
 
     @Override
     public double getArea() {
-        double area = (a.getX() * (b.getY() - c.getY()) + b.getX() * (c.getY() - a.getY()) +
-                c.getX() * (a.getY() - b.getY())) / 2.0f;
+        double area = (getA().getX() * (b.getY() - c.getY()) + b.getX() * (c.getY() - getA().getY()) +
+                c.getX() * (getA().getY() - b.getY())) / 2.0f;
         return Math.abs(area);
     }
 

@@ -1,23 +1,17 @@
-package com.cursor;
+package com.cursor.spaceShapes;
+
+import com.cursor.Vertex;
+import com.cursor.abstracts.SpaceShape;
 
 public class SquarePyramid extends SpaceShape {
 
-    private Vertex a;
     private double baseWidth;
     private double baseHeight;
 
-    public SquarePyramid(Vertex a, double baseWidth, double baseHeight) {
-        this.a = a;
+    public SquarePyramid(Vertex vertex, double baseWidth, double baseHeight) {
+        super(vertex);
         this.baseWidth = baseWidth;
         this.baseHeight = baseHeight;
-    }
-
-    public Vertex getA() {
-        return a;
-    }
-
-    public void setA(Vertex a) {
-        this.a = a;
     }
 
     public double getBaseWidth() {

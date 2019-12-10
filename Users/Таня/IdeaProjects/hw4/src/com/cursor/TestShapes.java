@@ -1,13 +1,19 @@
 package com.cursor;
 
-public class Main {
+import com.cursor.abstracts.Shape;
+import com.cursor.planeShapes.Circle;
+import com.cursor.planeShapes.Rectangle;
+import com.cursor.planeShapes.Triangle;
+import com.cursor.spaceShapes.Cuboid;
+import com.cursor.spaceShapes.Sphere;
+import com.cursor.spaceShapes.SquarePyramid;
 
-    public static void main(String[] args) {
+public class TestShapes {
+    public static void start() {
+        Vertex vertexSphere = new Vertex(1.0, 4.0);
+        Sphere sphere = new Sphere(vertexSphere, 4);
 
-        Vertex vertexSphere = new Vertex(2.0, 1.0);
-        Sphere sphere = new Sphere(vertexSphere, 4.0);
-
-        Vertex vertexCircle = new Vertex(3.0, 2.0);
+        Vertex vertexCircle = new Vertex(1.0, 4.0);
         Circle circle = new Circle(vertexCircle, 5.0);
 
         Vertex vertexRectangle = new Vertex(7.0, 8.0);
@@ -24,8 +30,8 @@ public class Main {
         Vertex vertexSquarePyramid = new Vertex(33.0, 33.0);
         SquarePyramid squarePyramid = new SquarePyramid(vertexSquarePyramid, 4.0, 7.0);
 
-        Shape[] array = {sphere, circle, rectangle, cuboid, triangle, squarePyramid};
 
+        Shape[] array = {sphere, circle, rectangle, cuboid, triangle, squarePyramid};
         for (Shape value : array) {
             System.out.println(value.toString());
         }
