@@ -1,0 +1,34 @@
+package com.cursor.space.shapes;
+
+import com.cursor.Vertex;
+import com.cursor.abstracts.SpaceShape;
+
+public class Sphere extends SpaceShape {
+
+    private double radius;
+
+    public Sphere(Vertex vertex, double radius) {
+        super(vertex);
+        this.radius = radius;
+    }
+
+    public double getRadius() {
+        return radius;
+    }
+
+    @Override
+    public double getArea() {
+        return Math.round(4 * Math.PI * Math.pow(getRadius(), 2) * hundred) / hundred;
+    }
+
+    @Override
+    public double getVolume() {
+        return Math.round((4.0 / 3.0) * Math.PI * Math.pow(getRadius(), 3) * hundred) / hundred;
+    }
+
+    @Override
+    public String toString() {
+        return "Sphere: " + "vertex " + getVertexA() + ", radius = " + getRadius() +
+                ", volume = " + getVolume() + ", area = " + getArea();
+    }
+}
